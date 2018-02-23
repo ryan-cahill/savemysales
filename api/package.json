@@ -1,0 +1,17 @@
+{
+  "name": "savemysales-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ryan-cahill",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^2.0.4",
+    "request": "^2.83.0",
+    "restify": "^6.3.4",
+    "restify-cors-middleware": "^1.1.0"
+  }
+}
