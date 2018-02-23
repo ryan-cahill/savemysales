@@ -53,7 +53,7 @@ server.get({
 }, (req, res) => {
     Promise.all([getValue('1'), getValue('2')]).then(resolutions => {
         const sum = parseInt(resolutions[0]) + parseInt(resolutions[1]);
-        findPrimeFactors(20).then(factors => {
+        findPrimeFactors(sum).then(factors => {
             console.log('Calculating factors for sum: ' + JSON.stringify(sum));
             res.send({
                 body: {
