@@ -87,7 +87,7 @@ class AdminPage extends Component {
                             {`Press the button to find the prime factors of two random numbers.`}
                         </Typography>
                         <div style={{paddingTop: 16}}>
-                            <Button variant='raised' color='primary' onClick={(e) => this.submitChanges(e)}>calculate</Button>
+                            <Button variant='raised' color='primary' disabled={this.state.isProcessing} onClick={(e) => this.submitChanges(e)}>calculate</Button>
                         </div>
                         {(this.state.isProcessing) ? this.renderSpinner() : this.renderResults()}
                     </Paper>
