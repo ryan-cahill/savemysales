@@ -35,7 +35,7 @@ const getValue = (value) => {
 const findPrimeFactors = (int) => {
     return new Promise((resolve) => {
         let factors = [];
-        for (let i = 2; i <= int; i++) {
+        for (let i = 2; i <= Math.sqrt(int); i++) {
             while (int % i == 0) {
                 factors.push(i);
                 int /= i;
@@ -73,3 +73,10 @@ server.get({
 server.listen(port, () => {
     console.log('server started on port ' + port);
 });
+
+//what could be done better
+//spent too much time setting up a caching solution
+//caching large primes for lookup later, frontloading work
+//polling when the service will take a while to reduce load, store guid in dictionary, look up later
+//might be a faster prime-finding algorithm out there
+//add better logging
